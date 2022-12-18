@@ -7,7 +7,7 @@ const path = require('path');
 
 app.use(express.json())
 
-mongoose.connect('mongodb+srv://user:@cluster0.tix7cgn.mongodb.net/?retryWrites=true&w=majority');
+mongoose.connect('mongodb+srv://user:<password>@cluster0.tix7cgn.mongodb.net/?retryWrites=true&w=majority');
 
 app.get('/users', User.list)
 app.post('/users', User.create)
