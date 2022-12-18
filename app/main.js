@@ -1,11 +1,21 @@
 const loadInitialTemplate = () => {
     const template =
-        '<h1>Usuarios</h1> <form id="user-form"><div> <label>Nombre</label><input name="username" /></div><div><label>Apellido</label><input name="lastname" /> </div><button type="submit">Enviar</button> </form ><ul id= "user-list"></ul>'
+        `
+    <h1>Usuarios</h1> 
+    <form id="user-form">
+    <div> 
+    <label>Nombre</label><input name="username" />
+    </div>
+    <div>
+    <label>Apellido</label><input name="lastname" /> 
+    </div><button type="submit">Enviar</button> 
+    </form >
+    <ul id= "user-list"></ul>`
     const body = document.getElementsByTagName('body')[0]
     body.innerHTML = template
 }
 
-const getUsers = async ()=>{
+const getUsers = async () => {
     const response = await fetch('/users')
     const users = await response.json()
     //console.log(users)
@@ -16,6 +26,9 @@ const getUsers = async ()=>{
     `
     const userList = document.getElementById('user-list')
     userList.innerHTML = users.map(user => template(user)).join('')
+    users.array.forEach(user => {
+        const userNode = document.querySelector(`[]`)
+    });
 }
 
 
