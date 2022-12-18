@@ -1,7 +1,7 @@
-
+import path from 'path';
 const mongoose = require("mongoose");
 //<password>
-mongoose.connect('mongodb+srv://user:<password>@cluster0.tix7cgn.mongodb.net/?retryWrites=true&w=majority');
+mongoose.connect('mongodb+srv://user:wxL976sDdHwM.cq@cluster0.tix7cgn.mongodb.net/?retryWrites=true&w=majority');
 mongoose.set('strictQuery', false);
 
 const User = mongoose.model('User', {
